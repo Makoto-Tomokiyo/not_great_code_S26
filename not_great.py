@@ -22,10 +22,8 @@ def height_converter(x):
             if split_x[1]=='':
                 pass
             else:
-                height_in_inches_converted_from_string=height_in_inches_converted_from_string+int(split_x[1].split('in')[0])
-
-
-
+                height_in_inches_converted_from_string += \
+                    int(split_x[1].split('in')[0])
         return height_in_inches_converted_from_string
 
 modcloth_data['height']=modcloth_data['height'].apply(height_converter)
